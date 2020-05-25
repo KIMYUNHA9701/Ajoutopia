@@ -10,28 +10,6 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-///* 회원 등록 /users/register */
-//router.post('/register', function(req, res, next) {
-//  var sql = 'insert into Student(id, password, name, school, num, major) values (?,?,?,?,?,?);';
-//  mysqlDB.query(sql, [req.body.id, req.body.password, req.body.name, req.body.school, req.body.num, req.body.major], function(error, info) {
-//    if(error == null) {
-//      console.log(info);
-//      res.json({
-//        "code" : 200,
-//        "result" : "success"
-//      });
-//
-//    }
-//    else{ // 사용자 ID가 중복되면
-//      console.log(error);
-//      res.json({
-//        "code" : 400,
-//        "result" : "failed"
-//      });
-//    }
-//  })
-//});
-
 /* 로그인  /users/login */
 router.post('/login', function(req, res, next) {
   var sql = 'select * from Student where id = ?';
