@@ -12,12 +12,12 @@ router.get('/', function(req, res, next) {
 
 /* 로그인  /users/login */
 router.post('/login', function(req, res, next) {
-  var sql = 'select * from Student where id = ?';
+  var sql = 'select * from user where id = ?';
 
   mysqlDB.query(sql, [req.body.id], function(error, result) {
     if(error == null) {
       if(result.length > 0) {
-        if(result[0].password == req.body.password) {
+        if(result[0].pw == req.body.pw) {
           console.log('login success');
           res.json({
             "code" : 200,
