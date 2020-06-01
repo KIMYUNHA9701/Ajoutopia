@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     port : 22,
     user : 'ubuntu',
     password : 'ajoutopia',
-    database : 'ajoutopia',
+    database : 'Ajoutopia',
     multipleStatements: true
 })
 
