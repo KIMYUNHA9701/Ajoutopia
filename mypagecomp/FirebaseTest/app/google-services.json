@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "473484925121",
+    "firebase_url": "https://my-ajou-bb-77428.firebaseio.com",
+    "project_id": "my-ajou-bb-77428",
+    "storage_bucket": "my-ajou-bb-77428.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473484925121:android:22a5f1b6713bf5d6775c40",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473484925121-1sqgmi9ph9lfbnnq5i59befnbvgvgfi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYpbeghLaPD4r7x_CxJYnjKHWVSzqNNRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473484925121-1sqgmi9ph9lfbnnq5i59befnbvgvgfi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
