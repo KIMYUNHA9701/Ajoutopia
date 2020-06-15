@@ -103,7 +103,7 @@ router.post('/mine/study', function(req, res, next) {
   });
 
 /* qna 게시물 */
-router.get('/qna', function(req, res, next) {
+router.post('/qna', function(req, res, next) {
   var sql = 'select title from qna';
 
     mysqlDB.query(sql, [], function(error, major) {
