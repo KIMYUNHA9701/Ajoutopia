@@ -9,6 +9,7 @@ var app = express();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postingRouter = require('./routes/posting');
+var testRouter = require('./routes/test');
 
 var mysqlDB = require('./config/mysql');
 mysqlDB.connect(function (err) {
@@ -39,6 +40,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posting', postingRouter);
+app.use('/test', testRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

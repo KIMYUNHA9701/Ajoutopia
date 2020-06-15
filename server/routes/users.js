@@ -3,8 +3,6 @@ var router = express.Router();
 
 var mysqlDB = require('../config/mysql');
 
-// /users
-
 /* GET users listing. /users */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
