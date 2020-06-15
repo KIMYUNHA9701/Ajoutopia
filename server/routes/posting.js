@@ -104,12 +104,12 @@ router.post('/mine/study', function(req, res, next) {
 router.post('/qna', function(req, res, next) {
   var sql = 'select title from qna';
 
-    mysqlDB.query(sql, [], function(error, result) {
+    mysqlDB.query(sql, [], function(error, title) {
         if(error == null) {
             console.log(result);
             res.json({
                 "code" : 200,
-                "result" : result
+                "result" : title
             });
         }
         else{
