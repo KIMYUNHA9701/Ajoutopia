@@ -14,7 +14,7 @@ router.post('/mine/qna', function(req, res, next) {
 
     mysqlDB.query(sql, [req.body.id], function(error, result) {
         if(error == null) {
-            console.log(major);
+            console.log(result);
             res.json({
                 "code" : 200,
                 "result" : result
@@ -37,7 +37,7 @@ router.post('/mine/study', function(req, res, next) {
 
     mysqlDB.query(sql, [req.body.id], function(error, result) {
         if(error == null) {
-            console.log(major);
+            console.log(result);
             res.json({
                 "code" : 200,
                 "result" : result
@@ -60,7 +60,7 @@ router.post('/mine/study', function(req, res, next) {
 
      mysqlDB.query(sql, [req.body.id, req.body.title], function(error, result) {
          if(error == null) {
-             console.log(major);
+             console.log(result);
              res.json({
                  "code" : 200,
                  "result" : result
@@ -83,7 +83,7 @@ router.post('/mine/study', function(req, res, next) {
 
       mysqlDB.query(sql, [req.body.id, req.body.title], function(error, result) {
           if(error == null) {
-              console.log(major);
+              console.log(result);
               res.json({
                   "code" : 200,
                   "result" : result
@@ -104,9 +104,9 @@ router.post('/mine/study', function(req, res, next) {
 router.post('/qna', function(req, res, next) {
   var sql = 'select title from qna';
 
-    mysqlDB.query(sql, [], function(error, major) {
+    mysqlDB.query(sql, [], function(error, result) {
         if(error == null) {
-            console.log(major);
+            console.log(result);
             res.json({
                 "code" : 200,
                 "result" : result
@@ -129,7 +129,7 @@ router.post('/qna', function(req, res, next) {
 
      mysqlDB.query(sql, [req.body.title], function(error, result) {
          if(error == null) {
-             console.log(major);
+             console.log(result);
              res.json({
                  "code" : 200,
                  "result" : result
@@ -152,7 +152,7 @@ router.get('/study', function(req, res, next) {
 
        mysqlDB.query(sql, [], function(error, result) {
            if(error == null) {
-               console.log(major);
+               console.log(result);
                res.json({
                    "code" : 200,
                    "result" : result
@@ -175,7 +175,7 @@ router.get('/study', function(req, res, next) {
 
      mysqlDB.query(sql, [req.body.title], function(error, result) {
          if(error == null) {
-             console.log(major);
+             console.log(result);
              res.json({
                  "code" : 200,
                  "result" : result
