@@ -12,12 +12,12 @@ router.get('/', function(req, res, next) {
 router.post('/mine/qna', function(req, res, next) {
   var sql = 'select title from qna, study where qna id = ?';
 
-    mysqlDB.query(sql, [req.body.id], function(error, major) {
+    mysqlDB.query(sql, [req.body.id], function(error, result) {
         if(error == null) {
             console.log(major);
             res.json({
                 "code" : 200,
-                "result" : major
+                "result" : result
             });
         }
         else{
@@ -35,12 +35,12 @@ router.post('/mine/qna', function(req, res, next) {
 router.post('/mine/study', function(req, res, next) {
   var sql = 'select title from study where id = ?';
 
-    mysqlDB.query(sql, [req.body.id], function(error, major) {
+    mysqlDB.query(sql, [req.body.id], function(error, result) {
         if(error == null) {
             console.log(major);
             res.json({
                 "code" : 200,
-                "result" : major
+                "result" : result
             });
         }
         else{
@@ -58,12 +58,12 @@ router.post('/mine/study', function(req, res, next) {
  router.post('/mine/qna/posting', function(req, res, next) {
    var sql = 'select nickname, title, posting, metoobtn from qna where id = ? and title = ?';
 
-     mysqlDB.query(sql, [req.body.id, req.body.title], function(error, major) {
+     mysqlDB.query(sql, [req.body.id, req.body.title], function(error, result) {
          if(error == null) {
              console.log(major);
              res.json({
                  "code" : 200,
-                 "result" : study
+                 "result" : result
              });
          }
          else{
@@ -81,12 +81,12 @@ router.post('/mine/study', function(req, res, next) {
   router.post('/mine/study/posting', function(req, res, next) {
     var sql = 'select nickname, title, posting, likebtn, scrabbtn from study where id = ? and title = ?';
 
-      mysqlDB.query(sql, [req.body.id, req.body.title], function(error, major) {
+      mysqlDB.query(sql, [req.body.id, req.body.title], function(error, result) {
           if(error == null) {
               console.log(major);
               res.json({
                   "code" : 200,
-                  "result" : study
+                  "result" : result
               });
           }
           else{
@@ -109,7 +109,7 @@ router.post('/qna', function(req, res, next) {
             console.log(major);
             res.json({
                 "code" : 200,
-                "result" : qna
+                "result" : result
             });
         }
         else{
@@ -127,12 +127,12 @@ router.post('/qna', function(req, res, next) {
  router.post('/qna/posting', function(req, res, next) {
    var sql = 'select nickname, title, posting, metoobtn from qna where title = ?';
 
-     mysqlDB.query(sql, [req.body.title], function(error, major) {
+     mysqlDB.query(sql, [req.body.title], function(error, result) {
          if(error == null) {
              console.log(major);
              res.json({
                  "code" : 200,
-                 "result" : study
+                 "result" : result
              });
          }
          else{
@@ -150,12 +150,12 @@ router.post('/qna', function(req, res, next) {
 router.get('/study', function(req, res, next) {
      var sql = 'select title from study';
 
-       mysqlDB.query(sql, [], function(error, major) {
+       mysqlDB.query(sql, [], function(error, result) {
            if(error == null) {
                console.log(major);
                res.json({
                    "code" : 200,
-                   "result" : study
+                   "result" : result
                });
            }
            else{
@@ -173,12 +173,12 @@ router.get('/study', function(req, res, next) {
  router.post('/study/posting', function(req, res, next) {
    var sql = 'select nickname, title, posting, likebtn, scrabbtn from study where title = ?';
 
-     mysqlDB.query(sql, [req.body.title], function(error, major) {
+     mysqlDB.query(sql, [req.body.title], function(error, result) {
          if(error == null) {
              console.log(major);
              res.json({
                  "code" : 200,
-                 "result" : study
+                 "result" : result
              });
          }
          else{
