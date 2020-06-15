@@ -106,7 +106,7 @@ router.post('/qna', function(req, res, next) {
 
     mysqlDB.query(sql, [], function(error, title) {
         if(error == null) {
-            console.log(result);
+            console.log(title);
             res.json({
                 "code" : 200,
                 "result" : title
