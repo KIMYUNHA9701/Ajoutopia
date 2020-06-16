@@ -125,7 +125,7 @@ router.post('/qna', function(req, res, next) {
 
 /* qna 게시물 보기 */
  router.post('/qna/posting', function(req, res, next) {
-   var sql = 'select metoobtn from qna where title = ?';
+   var sql = 'select metoobtn, posting from qna where title = ?';
   //var sql = 'select nickname, title, posting, metoobtn from qna where title = ?';
 
      mysqlDB.query(sql, [req.body.title], function(error, result) {
